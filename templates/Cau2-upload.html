@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Q2 - Dectect ROSE and SUNFLOWER</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/upload.css') }}">
+    <script src="{{url_for('static', filename='javascript/upload.js')}}"></script>
+    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="Q1" href="/">Q1</a>
+        <a class="Q2" href="/Q2">Q2</a>
+        <a href="#about">About</a>
+    </div>
+
+    <h2 style="text-align: center; color: darkgreen;margin: 30px 20px 10px 10px;"> Q2 - DETECT ROSE AND SUNFLOWER FLOWER YOLO</h2>
+    <h5 style="text-align: center; margin: 25px 25px 10px 10px;">Lưu ý: khi bạn upload, image sẽ được lưu lại trong database của sever</h5>
+    <form id="upload_images" target="_blank" class="needs-validation" novalidate method="POST" enctype="multipart/form-data">
+        <div class="file-upload">
+            <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add
+                Image</button>
+
+            <div class="image-upload-wrap">
+                <input class="file-upload-input" type='file' name='file' onchange="readURL(this);" accept="image/*" />
+                <div class="drag-text">
+                    <h3>Drag and drop a file or select add Image</h3>
+                </div>
+            </div>
+            <div class="file-upload-content">
+                <img class="file-upload-image" src="#" alt="your image" />
+                <div class="image-title-wrap">
+                    <button type="button" onclick="removeUpload()" class="remove-image">Remove</button>
+                </div>
+            </div>
+
+            <div form="upload_images" style="text-align: center; margin-top: 15px;">
+                <input type="submit" class="btn btn-success" id="btn_submit" value="Update image"/>
+            </div>
+    </form>
+    </div>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</html>

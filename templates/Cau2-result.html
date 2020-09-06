@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2 - Dectect ROSE and SUNFLOWER - Result</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/result.css') }}">
+
+</head>
+
+<body>
+    <h2 style="text-align: center; color: darkgreen;margin: 30px 20px 10px 10px;"> Q2 - DETECT ROSE AND SUNFLOWER FLOWER YOLO</h2>
+    <h5 style="text-align: center; margin: 25px 50px 10px 10px;">RESULT</h5>
+
+    <div class="card border-0 mx-auto bg-light" style="max-width: 600px;">
+        <div id="fullsized_image_holder" class="card-img-top my-auto" style="text-align: center;">
+            <img src="{{ f_name }}" alt="Card image cap" id="result-img">
+        </div>
+        <div class="card-body">
+            <a href="#" class="btn btn-success" id="btn-download" onclick="prepHref(this)" download>Download</a>
+        </div>
+      </div>
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+<script>
+    function prepHref(linkElement) {
+        var myDiv = document.getElementById('fullsized_image_holder');
+        var myImage = myDiv.children[0];
+        linkElement.href = myImage.src;
+    }
+</script>
+
+</html>
